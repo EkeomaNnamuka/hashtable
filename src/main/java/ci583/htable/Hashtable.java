@@ -277,7 +277,6 @@ public class Hashtable<V> {
 		}
 		return n;
 	}
-
 	/**
 	 * Resize the hashtable, to be used when the load factor exceeds maxLoad. The new size of
 	 * the underlying array should be the smallest prime number which is at least twice the size
