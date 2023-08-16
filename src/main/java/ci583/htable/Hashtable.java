@@ -285,17 +285,17 @@ public class Hashtable<V> {
 	 */
 	private void resize() {
 		int newCapacity = nextPrime(max * 2);
-		Hashtable<V> newTable = new Hashtable<>(newCapacity, probeType);
+		Hashtable<V> tableUpdate = new Hashtable<>(newCapacity, probeType);
 
 		for (Pair<V> pair : arr) {
 			if (pair != null) {
-				newTable.put(pair.key, pair.value);
+				tableUpdate.put(pair.key, pair.value);
 			}
 		}
 
-		arr = newTable.arr;
-		max = newTable.max;
-		itemCount = newTable.itemCount;
+		arr = tableUpdate.arr;
+		max = tableUpdate.max;
+		itemCount = tableUpdate.itemCount;
 	}
 
 	/**
